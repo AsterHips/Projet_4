@@ -1,25 +1,296 @@
-/****** General ***********/
+/********** General ***********/
+
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    max-width: 375px;
+}
+
+:root {
+    --main-color: #9356DC;
+    --second-color:#FF79DA;
+    --main-bg-color: #F7F7F7;
+    --footer-bg-color: #353535;
+    --nouveau-txt-color: #008766;
+    --nouveau-bg-color: #99E2D0;
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
     height : 63px;
-    box-shadow: 2px;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
-.retour {
-    align-self: center;
-}
-
-.logo {
-    align-self: center;
-    justify-self:center;
+header .logo {
     width: 162px;
     height: 44px;
+    grid-column: 2;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--footer-bg-color);
+    color: white;
+    height: 186px;
+    gap: 7px;
+    padding: 22px 0px 22px 25px;
+}
+
+footer .logo {
+    filter: invert(100%) sepia(21%) saturate(0%) hue-rotate(333deg) brightness(101%) contrast(103%);
+    width: 137.58px;
+    height: 27px;
+    margin-bottom: 16px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer-lien {
+    display: flex;
+    gap: 11px;
+    font-weight: 500;
+}
+
+.footer-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+h1 {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    padding-bottom: 26px;
+}
+
+/********** Main **********/
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EAEAEA;
+    height: 50px;
+    gap: 19px;
+    margin-bottom: 39.5px;
+}
+
+.localisation p {
+    font-weight: 500;
+}
+
+.explorer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 57px;
+}
+
+.explorer p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.explorer-button {
+    background: linear-gradient(to top, var(--main-color), var(--second-color));
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    height: 50px;
+    width: 218px;
+    border-radius: 25px;
+    align-self: center;
+    margin-top: 27px;
+}
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 20px 68px 20px;
+}
+
+.fonctionnement-etapes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+}
+
+.fonctionnement li {
+    position: relative;
+    display: flex;
+    padding-left: 34.49px;
+    align-items: center;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 0px #00000026;
+    width: 322.49px;
+    height: 72.38px;
+}
+
+.fonctionnement-etapes p {
+    position: absolute;
+    left: -12px;
+    padding-top: 2px;
+    color: white;
+    background-color: var(--main-color);
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+}
+
+.fa-mobile-screen-button {
+    font-size: 19.9px;
+    color: #7E7E7E;
+    margin-right: 27px;
+}
+
+.fa-list-ul {
+    font-size: 15.92px;
+    color: #7E7E7E;
+    margin-right: 23px;
+}
+
+.fa-store {
+    font-size: 17.91px;
+    color: var(--main-color);
+    margin-right: 20px;
+}
+
+.restaurant {
+    padding: 0px 15px 0px 14px;
+    margin-bottom: 66px;
+}
+
+.restaurant h2 {
+    padding-left: 6px;
+}
+
+.card {
+    position: relative;
+}
+
+.restaurant-cards img {
+    object-fit: cover;
+    padding: 0px 3px 0px 3px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 175px;
+    width: 340px;
+}
+
+.restaurant-cards h3 {
+    margin-bottom: 5px;
+}
+
+.card-content {
+    padding: 16px 0px 12px 13px;
+}
+
+.nouveaute {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 6px;
+    width: 80px;
+    height: 29px;
+    color: var(--nouveau-txt-color);
+    background-color: var(--nouveau-bg-color);
+    border-radius: 2px;
+}
+
+/********** Version Desktop **********/
+
+@media (min-width: 1280px) {
+
+    * {
+        max-width: 1440px;
+    }
+
+    header .logo {
+        justify-self: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: 700;
+        padding-bottom: 28px;
+    }
+
+    .explorer {
+        margin-bottom: 30px;
+    }
+
+    .explorer-button {
+        margin-top: 18px;
+    }
+
+    .fonctionnement {
+        padding: 50px 0px 50px 180px;
+    }
+
+    .fonctionnement-etapes {
+        flex-direction: row;
+    }
+
+    .restaurant {
+        padding: 0px 180px 0px 180px;
+        margin-bottom: 66px;
+    }
+
+    .restaurant-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 60px;
+    }
+
+    .restaurant h2 {
+        padding-left: 0px;
+    }
+
+    .restaurant-cards img {
+        height: 175px;
+        width: 498px;
+    }
+
+    footer {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 0px 30px 50px 0px;
+    }
+
+    footer .logo {
+        margin-bottom: 0px;
+        margin-left: 100px;
+    }
+
+    .footer-nav {
+        flex-direction: row;
+    }
+
+    .footer-infos {
+        display: flex;
+        gap: 7px;
+        margin-left: 40px;
+    }
+
 }
