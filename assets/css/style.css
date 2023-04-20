@@ -6,6 +6,8 @@
     margin: 0px;
     box-sizing: border-box;
     max-width: 375px;
+    margin-left: auto;
+    margin-right: auto
 }
 
 :root {
@@ -39,6 +41,7 @@ footer {
     height: 186px;
     gap: 7px;
     padding: 22px 0px 22px 25px;
+    margin: 0;
 }
 
 footer .logo {
@@ -52,18 +55,21 @@ footer .logo {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    margin: 0;
 }
 
 .footer-lien {
     display: flex;
     gap: 11px;
     font-weight: 500;
+    margin: 0;
 }
 
 .footer-infos {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    margin-left: 0;
 }
 
 h1 {
@@ -74,6 +80,10 @@ h1 {
 h2 {
     font-size: 24px;
     padding-bottom: 26px;
+}
+
+i {
+    margin: 0px;
 }
 
 /********** Main **********/
@@ -90,6 +100,7 @@ h2 {
 
 .localisation p {
     font-weight: 500;
+    margin: 0;
 }
 
 .explorer{
@@ -157,24 +168,24 @@ h2 {
 .fa-mobile-screen-button {
     font-size: 19.9px;
     color: #7E7E7E;
-    margin-right: 27px;
+    padding-right: 27px;
 }
 
 .fa-list-ul {
     font-size: 15.92px;
     color: #7E7E7E;
-    margin-right: 23px;
+    padding-right: 23px;
 }
 
 .fa-store {
     font-size: 17.91px;
     color: var(--main-color);
-    margin-right: 20px;
+    padding-right: 20px;
 }
 
 .restaurant {
     padding: 0px 15px 0px 14px;
-    margin-bottom: 66px;
+    margin-bottom: 51px;
 }
 
 .restaurant h2 {
@@ -199,6 +210,7 @@ h2 {
 }
 
 .card-content {
+    position: relative;
     padding: 16px 0px 12px 13px;
 }
 
@@ -217,16 +229,51 @@ h2 {
     border-radius: 2px;
 }
 
+.fa-heart {
+    position: absolute;
+    top: 23px;
+    right: 25px;
+    font-size: 21px;
+}
+
+.favoris {
+    color: linear-gradient(to bottom, var(--main-color), var(--second-color));
+}
+
 /********** Version Desktop **********/
 
 @media (min-width: 1280px) {
 
     * {
-        max-width: 1440px;
+        max-width: 100%;
     }
 
     header .logo {
         justify-self: center;
+    }
+    
+    footer {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 0px 30px 30px 0px;
+        height: 114px;
+    }
+
+    footer .logo {
+        margin-right: 50px;
+        margin-bottom: 0;
+        margin-left: 80px;
+    }
+
+    .footer-nav {
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .footer-infos {
+        flex-direction: row;
+        gap: 7px;
+        margin-left: 40px;
     }
 
     h1 {
@@ -247,8 +294,13 @@ h2 {
         padding: 50px 0px 50px 180px;
     }
 
+    .fonctionnement h2 {
+        margin-left: 65px;
+    }
+
     .fonctionnement-etapes {
         flex-direction: row;
+        margin-left: 77px;
     }
 
     .restaurant {
@@ -264,33 +316,11 @@ h2 {
     }
 
     .restaurant h2 {
-        padding-left: 0px;
+        padding-left: 65px;
     }
 
     .restaurant-cards img {
         height: 175px;
         width: 498px;
     }
-
-    footer {
-        flex-direction: row-reverse;
-        align-items: flex-end;
-        padding: 0px 30px 50px 0px;
-    }
-
-    footer .logo {
-        margin-bottom: 0px;
-        margin-left: 100px;
-    }
-
-    .footer-nav {
-        flex-direction: row;
-    }
-
-    .footer-infos {
-        display: flex;
-        gap: 7px;
-        margin-left: 40px;
-    }
-
 }
