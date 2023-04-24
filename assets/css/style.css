@@ -6,8 +6,7 @@
     margin: 0px;
     box-sizing: border-box;
     max-width: 375px;
-    margin-left: auto;
-    margin-right: auto
+    /* pour centrer en responsive */
 }
 
 :root {
@@ -24,7 +23,8 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height : 63px;
-    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 4px 0px #00000026;
+    position: relative;
 }
 
 header .logo {
@@ -36,12 +36,12 @@ header .logo {
 footer {
     display: flex;
     flex-direction: column;
+    justify-items: left;
     background-color: var(--footer-bg-color);
     color: white;
     height: 186px;
     gap: 7px;
     padding: 22px 0px 22px 25px;
-    margin: 0;
 }
 
 footer .logo {
@@ -55,21 +55,35 @@ footer .logo {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin: 0;
+}
+
+.fa-utensils {
+    align-self: center;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.fa-handshake-angle {
+    align-self: center;
+    font-size: 13px;
 }
 
 .footer-lien {
     display: flex;
     gap: 11px;
     font-weight: 500;
-    margin: 0;
 }
 
 .footer-infos {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin-left: 0;
+    margin-top: 7px;
+}
+
+.footer-infos a {
+    color: white;
+    text-decoration: none;
 }
 
 h1 {
@@ -80,10 +94,6 @@ h1 {
 h2 {
     font-size: 24px;
     padding-bottom: 26px;
-}
-
-i {
-    margin: 0px;
 }
 
 /********** Main **********/
@@ -100,7 +110,6 @@ i {
 
 .localisation p {
     font-weight: 500;
-    margin: 0;
 }
 
 .explorer{
@@ -152,6 +161,7 @@ i {
     box-shadow: 0px 4px 15px 0px #00000026;
     width: 322.49px;
     height: 72.38px;
+    margin-left: 12px;
 }
 
 .fonctionnement-etapes p {
@@ -194,6 +204,7 @@ i {
 
 .card {
     position: relative;
+    margin-bottom: 10px;
 }
 
 .restaurant-cards img {
@@ -240,12 +251,21 @@ i {
     color: linear-gradient(to bottom, var(--main-color), var(--second-color));
 }
 
+
+/********** Version Tablette **********/
+
+/* @media (min-width: 1024px) */
+
 /********** Version Desktop **********/
 
 @media (min-width: 1280px) {
 
     * {
         max-width: 100%;
+    }
+
+    main {
+        justify-items: center;
     }
 
     header .logo {
@@ -265,6 +285,12 @@ i {
         margin-left: 80px;
     }
 
+    .footer {
+        display: flex;
+        justify-content: right;
+        margin: 0;
+    }
+
     .footer-nav {
         flex-direction: row;
         margin: 0;
@@ -272,7 +298,7 @@ i {
 
     .footer-infos {
         flex-direction: row;
-        gap: 7px;
+        margin-top: 0;
         margin-left: 40px;
     }
 
@@ -313,6 +339,8 @@ i {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 60px;
+        max-width: 1060px;
+        padding-left: 65px;
     }
 
     .restaurant h2 {
