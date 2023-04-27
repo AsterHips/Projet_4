@@ -17,12 +17,47 @@
 }
 
 .loader {
-    height: 1vh;
-    width: 1vw;
+    position: fixed;
+    background-color: var(--main-bg-color);
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    animation: fadeOut 2.5s ease-in-out forwards;
 }
+
+@keyframes fadeOut {
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.loading{
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: Shrikhand, sans-serif;
+    color: var(--main-color);
+    animation: smokeOut 0.5s ease-in-out 0ms 5 alternate forwards;
+    text-shadow: 0 0 1px white;
+  }
+  .loading:before {
+    content: "ohmyfood";
+  }
+
+  @keyframes smokeOut {
+    100% {
+      opacity: 0.08;
+      filter: blur(5px);
+      letter-spacing: 4px;
+      color: var(--second-color);
+    }
+  }
 
 header {
     display: grid;
