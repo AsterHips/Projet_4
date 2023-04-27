@@ -5,8 +5,6 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    max-width: 375px;
-    /* pour centrer en responsive */
 }
 
 :root {
@@ -16,6 +14,14 @@
     --footer-bg-color: #353535;
     --nouveau-txt-color: #008766;
     --nouveau-bg-color: #99E2D0;
+}
+
+.loader {
+    height: 1vh;
+    width: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -88,7 +94,7 @@ footer .logo {
 
 h1 {
     font-size: 24px;
-    padding-bottom: 10px;
+    padding: 0px 20px 10px 20px;
 }
 
 h2 {
@@ -137,6 +143,12 @@ h2 {
     align-self: center;
     margin-top: 27px;
 }
+
+.explorer-button:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+}
+
 
 .fonctionnement {
     display: flex;
@@ -205,6 +217,7 @@ h2 {
 .card {
     position: relative;
     margin-bottom: 10px;
+    width: 346px;
 }
 
 .restaurant-cards img {
@@ -240,15 +253,70 @@ h2 {
     border-radius: 2px;
 }
 
-.fa-heart {
+.favoris {
+    display: flex;
     position: absolute;
     top: 23px;
     right: 25px;
     font-size: 21px;
 }
 
-.favoris {
-    color: linear-gradient(to bottom, var(--main-color), var(--second-color));
+@keyframes full {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+#resto1, #resto2, #resto3, #resto4 {
+    display: none;
+}
+
+i.fav { 
+    display: none;
+    background: linear-gradient(to bottom, var(--main-color), var(--second-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: all 500ms ease-in-out 0ms;
+    animation: full 0.5s;
+    opacity: 1;
+}
+
+#resto1:checked + label > i.fav {
+    display: inline-block;
+}
+
+#resto1:checked + label > i.neutre {
+    display: none;
+}
+
+#resto2:checked + label > i.fav {
+    display: inline-block;
+}
+
+#resto2:checked + label > i.neutre {
+    display: none; 
+}
+
+#resto3:checked + label > i.fav {
+    display: inline-block;
+}
+
+#resto3:checked + label > i.neutre {
+    display: none; 
+}
+
+#resto4:checked + label > i.fav {
+    display: inline-block;
+}
+
+#resto4:checked + label > i.neutre {
+    display: none; 
 }
 
 
