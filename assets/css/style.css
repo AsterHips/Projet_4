@@ -5,12 +5,19 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 :root {
     --main-color: #9356DC;
     --second-color:#FF79DA;
     --main-bg-color: #F7F7F7;
+    --menu-bg-color: #F6F6F6;
     --footer-bg-color: #353535;
     --nouveau-txt-color: #008766;
     --nouveau-bg-color: #99E2D0;
@@ -31,9 +38,11 @@
 @keyframes fadeOut {
     90% {
         opacity: 1;
+        z-index: 1;
     }
     100% {
         opacity: 0;
+        z-index: -1;
     }
 }
 
@@ -72,6 +81,11 @@ header .logo {
     width: 162px;
     height: 44px;
     grid-column: 2;
+}
+
+.fa-arrow-left {
+    font-size: 16px;
+    margin-left: 23px;
 }
 
 footer {
@@ -175,7 +189,6 @@ h2 {
     height: 50px;
     width: 218px;
     border-radius: 25px;
-    align-self: center;
     margin-top: 27px;
 }
 
@@ -240,12 +253,12 @@ h2 {
     padding-right: 20px;
 }
 
-.restaurant {
+.restaurants {
     padding: 0px 15px 0px 14px;
     margin-bottom: 51px;
 }
 
-.restaurant h2 {
+.restaurants h2 {
     padding-left: 6px;
 }
 
@@ -298,7 +311,7 @@ h2 {
 
 @keyframes full {
     from {
-      opacity: 0.5;
+      opacity: 0.1;
     }
     to {
       opacity: 1;
@@ -354,6 +367,112 @@ i.fav {
     display: none; 
 }
 
+.illustration > img {
+    width: 100vw;
+    height: 275px;
+    object-fit: cover;
+}
+
+.menu {
+    /* Position absolute permet d'avoir l'image derrière avec le z-index, mais le footer passe derrière */
+    position: absolute;
+    top: 283px;
+    z-index: 1;
+    width: 100vw;
+    background-color: var(--menu-bg-color);
+    border-radius: 25px 25px;
+}
+
+.titre-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 41px 42px 17px;
+}
+
+.titre-menu > h1 {
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-style: italic;
+    padding: 0px;
+}
+
+.titre-menu > .favoris {
+    position: unset;
+}
+
+.titre-menu i {
+    font-size: 28px;
+}
+
+.menu h2 {
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 7px;
+}
+
+.categorie {
+    margin-left: 13px;
+}
+
+.ligne {
+    width: 40px;
+    height: 3px;
+    background-color: #99E2D0;
+}
+
+.produits {
+    margin-bottom: 40px;
+}
+
+.produit {
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    margin: 13px;
+    padding: 12px 16px 12px 15px;
+    box-shadow: 0px 2px 4px 0px #00000026;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.produit p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.prix {
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    right: 16px;
+}
+
+.commander {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.commander-button {
+    background: linear-gradient(to top, var(--main-color), var(--second-color));
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    height: 50px;
+    width: 218px;
+    border-radius: 25px;
+}
+
+.commander-button:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+}
 
 /********** Version Tablette **********/
 
