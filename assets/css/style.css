@@ -395,7 +395,7 @@ i.fav {
   margin-left: auto;
   margin-right: auto;
   transform-origin: bottom;
-  scale: 1 1.0214
+  scale: 1 1.0214;
 }
 
 .titre-menu {
@@ -437,33 +437,33 @@ i.fav {
 }
 
 .produits {
-    padding-bottom: 40px;
-    max-width: 375px;
+  padding-bottom: 40px;
+  max-width: 375px;
 }
 
 @keyframes slide-left {
-    from {
-              transform: translateX(100vw);
-    }
-    to {
-              transform: translateX(0px);
-    }
+  from {
+    transform: translateX(100vw);
   }
+  to {
+    transform: translateX(0px);
+  }
+}
 
 .entrees {
-    animation: slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s both;
+  animation: slide-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s both;
 }
 
 .plats {
-    animation: slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.4s both;
+  animation: slide-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
 }
 
 .desserts {
-    animation: slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.7s both;
+  animation: slide-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both;
 }
 
 .produit {
-    display: flex;
+  display: flex;
   background-color: white;
   border-radius: 15px;
   margin: 13px;
@@ -483,10 +483,10 @@ h4 {
 }
 
 .produit-texte {
-    padding: 12px 0px 12px 15px;
-    width: 1022px;
-    /* white-space: nowrap; */
-    overflow: hidden;
+  padding: 12px 0px 12px 15px;
+  width: 1022px;
+  /* white-space: nowrap; */
+  overflow: hidden;
 }
 
 /* TROU NOIR DE PIXELS WTF *********************************************************************************************************************************/
@@ -503,42 +503,44 @@ h4 {
 }
 
 @keyframes slide-validation {
-    from {
-              transform: translateX(59px);
-    }
-    to {
-              transform: translateX(0px);
-    }
+  from {
+    transform: translateX(59px);
   }
+  to {
+    transform: translateX(0px);
+  }
+}
 
 .validation {
-    display: flex;
-    width: 59px;
-    height: 69px;
-    border-radius: 0px 15px 15px 0px;
-    background-color: var(--nouveau-bg-color);
-    justify-content: center;
-    align-items: center;
-    transform: translateX(59px);
+  display: flex;
+  width: 59px;
+  height: 69px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: var(--nouveau-bg-color);
+  justify-content: center;
+  align-items: center;
+  transform: translateX(59px);
 }
 
-.produit:hover > .validation, .produit:hover > .prix {
-    animation: slide-validation 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.produit:hover > .validation,
+.produit:hover > .prix {
+  animation: slide-validation 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.produit:hover > .produit-texte h4, p {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;    
+.produit:hover > .produit-texte h4,
+p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .produit:hover > .produit-texte {
-    width: 290px;
+  width: 290px;
 }
 
 .fa-circle-check {
-    color: white;
-    font-size: 20px;
+  color: white;
+  font-size: 20px;
 }
 
 .commander {
