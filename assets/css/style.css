@@ -489,7 +489,7 @@ h4 {
   overflow: hidden;
 }
 
-/* TROU NOIR DE PIXELS WTF *********************************************************************************************************************************/
+/* TROU NOIR DE PIXELS  *********************************************************************************************************************************/
 /* L'anim est bien mais elle démarre à droite, et la width fait n'importe quoi */
 /* En mettant le nowrap seulement après le déclencheur, ça rend mieux mais toujours un trou noir */
 
