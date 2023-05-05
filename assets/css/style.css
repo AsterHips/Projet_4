@@ -475,6 +475,7 @@ h4 {
 .produit p {
   font-size: 15px;
   font-weight: 300;
+  margin-top: 5px;
 }
 
 .produit-texte {
