@@ -205,14 +205,18 @@ h2 {
 }
 
 .fonctionnement {
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 48px 20px 68px 20px;
 }
 
 .fonctionnement-etapes {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     text-align: center;
     gap: 25px;
 }
@@ -262,8 +266,11 @@ h2 {
 .restaurants {
     padding: 54px 15px 51px 14px;
     background-color: var(--main-bg-color);
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .restaurants h2 {
@@ -601,10 +608,6 @@ h4 {
 /********** Version Tablette **********/
 
 @media (min-width: 376px) {
-    * {
-        max-width: 100%;
-    }
-
     main {
         display: flex;
         flex-direction: column;
@@ -709,6 +712,10 @@ h4 {
 
     .explorer-button {
         margin-top: 18px;
+    }
+
+    .fonctionnement {
+        align-content: center;
     }
 
     .fonctionnement li {
