@@ -51,7 +51,7 @@ a {
     letter-spacing: 2px;
     font-family: "Shrikhand", sans-serif;
     color: var(--main-color);
-    animation: smokeOut 0.5s ease-in-out 0ms 5 alternate forwards;
+    animation: smokeOut 0.4s ease-in-out 0ms 4 alternate forwards;
     text-shadow: 0 0 1px white;
 }
 .loading:before {
@@ -405,8 +405,6 @@ i.fav {
     max-width: 375px;
     background-color: var(--menu-bg-color);
     border-radius: 25px 25px 0px 0px;
-    margin-left: auto;
-    margin-right: auto;
     transform-origin: bottom;
     scale: 1 1.0214;
 }
@@ -480,6 +478,7 @@ i.fav {
     justify-content: space-between;
     position: relative;
     background-color: white;
+    /* width: 634px; µ****************************************************************************************************************/
     border-radius: 15px;
     margin: 13px;
     box-shadow: 0px 2px 4px 0px #00000026;
@@ -648,13 +647,13 @@ h4 {
     }
 }
 
+/********** Version Desktop **********/
+
 @media (min-width: 800px) {
     .fonctionnement-etapes {
         flex-direction: row;
     }
 }
-
-/********** Version Desktop **********/
 
 @media (min-width: 1085px) {
     footer {
@@ -737,5 +736,36 @@ h4 {
     .restaurant-cards img {
         height: 175px;
         width: 498px;
+    }
+
+    .menu {
+      max-width: 1055px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .titre-menu {
+      justify-content: center;
+    }
+
+    .favoris {
+      margin-left: 24px;
+    }
+
+    .categorie {
+      align-self: self-start;
+      margin-left: 210px;
+    }
+
+    .produits {
+      max-width: 634px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .produit {
+      width: 634px;
     }
 }
