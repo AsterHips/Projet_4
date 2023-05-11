@@ -406,7 +406,7 @@ i.fav {
     background-color: var(--menu-bg-color);
     border-radius: 25px 25px 0px 0px;
     transform-origin: bottom;
-    scale: 1 1.0214;
+    transform: scaleY(1.0214);
 }
 
 .titre-menu {
@@ -478,7 +478,6 @@ i.fav {
     justify-content: space-between;
     position: relative;
     background-color: white;
-    /* width: 634px; µ****************************************************************************************************************/
     border-radius: 15px;
     margin: 13px;
     box-shadow: 0px 2px 4px 0px #00000026;
@@ -645,6 +644,10 @@ h4 {
         gap: 60px;
         max-width: 1059px;
     }
+
+    .commander {
+      width: 100vw;
+    }
 }
 
 /********** Version Desktop **********/
@@ -767,5 +770,9 @@ h4 {
 
     .produit {
       width: 634px;
+    }
+
+    .commander {
+      max-width: 1055px;
     }
 }
