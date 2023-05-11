@@ -646,7 +646,7 @@ h4 {
     }
 
     .commander {
-      width: 100vw;
+        width: 100vw;
     }
 }
 
@@ -742,37 +742,37 @@ h4 {
     }
 
     .menu {
-      max-width: 1055px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        max-width: 1055px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .titre-menu {
-      justify-content: center;
+        justify-content: center;
     }
 
     .favoris {
-      margin-left: 24px;
+        margin-left: 24px;
     }
 
     .categorie {
-      align-self: self-start;
-      margin-left: 210px;
+        align-self: self-start;
+        margin-left: 210px;
     }
 
     .produits {
-      max-width: 634px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        max-width: 634px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .produit {
-      width: 634px;
+        width: 634px;
     }
 
     .commander {
-      max-width: 1055px;
+        max-width: 1055px;
     }
 }
